@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/Minibaking}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate # Flyway owns schema changes; Hibernate only checks mappings.
+    open-in-view: false
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration-ms: 3600000
+  cors:
+    allowed-origin: ${CORS_ALLOWED_ORIGIN:http://localhost:5173}
+  bootstrap:
+    super-admin:
+      full-name: ${SUPER_ADMIN_FULL_NAME:}
+      email: ${SUPER_ADMIN_EMAIL:}
+      phone-number: ${SUPER_ADMIN_PHONE_NUMBER:}
+      password: ${SUPER_ADMIN_PASSWORD:}

@@ -1,4 +1,7 @@
 target/
+/.env
+/.env.*
+!/.env.example
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -21,6 +24,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.env
 
 ### NetBeans ###
 /nbproject/private/
@@ -34,6 +38,7 @@ build/
 
 ### VS Code ###
 .vscode/
+.docs/
 
 ### Mac OS ###
 .DS_Store
